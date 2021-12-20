@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeterReadings.API.Migrations
 {
     [DbContext(typeof(MeterReadingContext))]
-    [Migration("20211220211855_initial")]
+    [Migration("20211220222831_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

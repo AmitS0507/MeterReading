@@ -43,13 +43,13 @@ namespace MeterReadings.API.DAL
                         //Not to add same entry twice
                         if (_context.MeterReading.AsNoTracking().Any(o => o.AccountId == meterReading.AccountId))
                         {
-                            _context.MeterReading.Update(meterReading);
-                            _context.Entry(meterReading).State = EntityState.Modified;
+                            _context.MeterReading.Attach(meterReading);
+                           
                         }
                         else
                         {
                             _context.MeterReading.Add(meterReading);
-                            _context.Entry(meterReading).State = EntityState.Added;
+                            
                         }
                     }
 
