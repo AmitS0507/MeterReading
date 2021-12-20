@@ -32,7 +32,7 @@ namespace MeterReadings.API.Controllers
             }
 
            
-            return Ok(await _meterReadingRepository.UploadMeterReadingAsync(meterReadings.FileName));
+            return Ok("Number of successful processed records=" + await _meterReadingRepository.UploadMeterReadingAsync(meterReadings.FileName));
         }
 
       
