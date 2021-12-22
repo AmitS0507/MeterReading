@@ -13,8 +13,12 @@ namespace MeterReadings.API.Models
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        // Foreign key   
+        [ForeignKey("Account")]
         public int AccountId { get; set; }
         public DateTime MeterReadingDateTime { get; set; }
         public string MeterReadValue { get; set; }
+        
+       
     }
 }

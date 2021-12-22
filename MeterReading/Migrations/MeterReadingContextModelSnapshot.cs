@@ -21,13 +21,10 @@ namespace MeterReadings.API.Migrations
 
             modelBuilder.Entity("MeterReadings.API.Models.Account", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AccountId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
@@ -35,113 +32,98 @@ namespace MeterReadings.API.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("AccountId");
 
                     b.ToTable("Account");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
                             AccountId = 2344,
                             FirstName = "Tommy",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 2,
                             AccountId = 2233,
                             FirstName = "Bany",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 3,
                             AccountId = 8766,
                             FirstName = "Sally",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 4,
                             AccountId = 2345,
                             FirstName = "Jerry",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 5,
-                            AccountId = 2345,
-                            FirstName = "Jerry",
-                            LastName = "Test"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            AccountId = 2345,
-                            FirstName = "Jerry",
-                            LastName = "Test"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            AccountId = 2345,
-                            FirstName = "Jerry",
-                            LastName = "Test"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            AccountId = 2345,
-                            FirstName = "Jerry",
-                            LastName = "Test"
-                        },
-                        new
-                        {
-                            Id = 9,
                             AccountId = 2346,
+                            FirstName = "Jerry",
+                            LastName = "Test"
+                        },
+                        new
+                        {
+                            AccountId = 2347,
+                            FirstName = "Jerry",
+                            LastName = "Test"
+                        },
+                        new
+                        {
+                            AccountId = 2348,
+                            FirstName = "Jerry",
+                            LastName = "Test"
+                        },
+                        new
+                        {
+                            AccountId = 2349,
+                            FirstName = "Jerry",
+                            LastName = "Test"
+                        },
+                        new
+                        {
+                            AccountId = 2350,
                             FirstName = "Ollie",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 10,
-                            AccountId = 2347,
+                            AccountId = 2351,
                             FirstName = "Tera",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 11,
-                            AccountId = 2348,
+                            AccountId = 2352,
                             FirstName = "Tammy",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 12,
-                            AccountId = 2349,
+                            AccountId = 2353,
                             FirstName = "Simon",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 13,
-                            AccountId = 2350,
+                            AccountId = 2355,
                             FirstName = "Colin",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 14,
-                            AccountId = 2351,
+                            AccountId = 2356,
                             FirstName = "Gladys",
                             LastName = "Test"
                         },
                         new
                         {
-                            Id = 15,
-                            AccountId = 2352,
+                            AccountId = 6776,
                             FirstName = "Greg",
                             LastName = "Test"
                         });

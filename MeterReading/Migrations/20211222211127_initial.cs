@@ -11,15 +11,14 @@ namespace MeterReadings.API.Migrations
                 name: "Account",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    AccountId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AccountId = table.Column<int>(type: "int", nullable: false)
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Account", x => x.Id);
+                    table.PrimaryKey("PK_Account", x => x.AccountId);
                 });
 
             migrationBuilder.CreateTable(
@@ -39,24 +38,24 @@ namespace MeterReadings.API.Migrations
 
             migrationBuilder.InsertData(
                 table: "Account",
-                columns: new[] { "Id", "AccountId", "FirstName", "LastName" },
+                columns: new[] { "AccountId", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { 1, 2344, "Tommy", "Test" },
-                    { 2, 2233, "Bany", "Test" },
-                    { 3, 8766, "Sally", "Test" },
-                    { 4, 2345, "Jerry", "Test" },
-                    { 5, 2345, "Jerry", "Test" },
-                    { 6, 2345, "Jerry", "Test" },
-                    { 7, 2345, "Jerry", "Test" },
-                    { 8, 2345, "Jerry", "Test" },
-                    { 9, 2346, "Ollie", "Test" },
-                    { 10, 2347, "Tera", "Test" },
-                    { 11, 2348, "Tammy", "Test" },
-                    { 12, 2349, "Simon", "Test" },
-                    { 13, 2350, "Colin", "Test" },
-                    { 14, 2351, "Gladys", "Test" },
-                    { 15, 2352, "Greg", "Test" }
+                    { 2344, "Tommy", "Test" },
+                    { 2233, "Bany", "Test" },
+                    { 8766, "Sally", "Test" },
+                    { 2345, "Jerry", "Test" },
+                    { 2346, "Jerry", "Test" },
+                    { 2347, "Jerry", "Test" },
+                    { 2348, "Jerry", "Test" },
+                    { 2349, "Jerry", "Test" },
+                    { 2350, "Ollie", "Test" },
+                    { 2351, "Tera", "Test" },
+                    { 2352, "Tammy", "Test" },
+                    { 2353, "Simon", "Test" },
+                    { 2355, "Colin", "Test" },
+                    { 2356, "Gladys", "Test" },
+                    { 6776, "Greg", "Test" }
                 });
         }
 

@@ -9,11 +9,11 @@ namespace MeterReadings.API.Models
 {
     public class Account
     {
-        [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+       
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int AccountId { get; set; }
 
       

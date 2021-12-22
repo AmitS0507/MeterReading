@@ -13,7 +13,7 @@ namespace MeterReadings.API.Models
         {
 
         }
-        public MeterReadingContext(DbContextOptions options) : base(options)
+        public MeterReadingContext(DbContextOptions<MeterReadingContext> options) : base(options)
         {
 
         }
@@ -27,106 +27,106 @@ namespace MeterReadings.API.Models
             modelBuilder.Entity<Account>().HasData(
                 new Account
                 {
-                    Id = 1,
+                    
                     AccountId = 2344,
                     FirstName = "Tommy",
                     LastName = "Test"
                 },
                 new Account
                 {
-                    Id = 2,
+                    
                     AccountId = 2233,
                     FirstName = "Bany",
                     LastName = "Test"
                 },
                 new Account
                 {
-                    Id = 3,
+                    
                     AccountId = 8766,
                     FirstName = "Sally",
                     LastName = "Test"
                 },
                 new Account
                 {
-                    Id = 4,
+                    
                     AccountId = 2345,
                     FirstName = "Jerry",
                     LastName = "Test"
                 },
                  new Account
                  {
-                     Id = 5,
-                     AccountId = 2345,
+                     
+                     AccountId = 2346,
                      FirstName = "Jerry",
                      LastName = "Test"
                  },
                   new Account
                   {
-                      Id = 6,
-                      AccountId = 2345,
+                      
+                      AccountId = 2347,
                       FirstName = "Jerry",
                       LastName = "Test"
                   },
                    new Account
                    {
-                       Id = 7,
-                       AccountId = 2345,
+                       
+                       AccountId = 2348,
                        FirstName = "Jerry",
                        LastName = "Test"
                    },
                     new Account
                     {
-                        Id = 8,
-                        AccountId = 2345,
+                       
+                        AccountId = 2349,
                         FirstName = "Jerry",
                         LastName = "Test"
                     },
                      new Account
                      {
-                         Id = 9,
-                         AccountId = 2346,
+                        
+                         AccountId = 2350,
                          FirstName = "Ollie",
                          LastName = "Test"
                      },
                      new Account
                       {
-                         Id = 10,
-                         AccountId = 2347,
+                         
+                         AccountId = 2351,
                           FirstName = "Tera",
                           LastName = "Test"
                       },
                      new Account
                      {
-                         Id = 11,
-                         AccountId = 2348,
+                         
+                         AccountId = 2352,
                          FirstName = "Tammy",
                          LastName = "Test"
                      },
                        new Account
                        {
-                           Id = 12,
-                           AccountId = 2349,
+                          
+                           AccountId = 2353,
                            FirstName = "Simon",
                            LastName = "Test"
                        },
                        new Account
                        {
-                           Id = 13,
-                           AccountId = 2350,
+                           
+                           AccountId = 2355,
                            FirstName = "Colin",
                            LastName = "Test"
                        },
                        new Account
                        {
-                           Id = 14,
-                           AccountId = 2351,
+                           
+                           AccountId = 2356,
                            FirstName = "Gladys",
                            LastName = "Test"
                        },
                         new Account
                         {
-                            Id = 15,
-                            AccountId = 2352,
+                           
+                            AccountId = 6776,
                             FirstName = "Greg",
                             LastName = "Test"
                         }
