@@ -5,7 +5,7 @@ export class UploadFile extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { forecasts: [], loading: true };
+       
     }
 
  
@@ -27,12 +27,11 @@ export class UploadFile extends Component {
                 />
                 </div>
                 
-        );console.log(`Here: ${data}`)
+        );
     }
      handleChange = async (event) => {
         
         let csv = event.target.files[0];
-        
         let formData = new FormData();
         formData.append('file', csv);
         let options = {
@@ -41,8 +40,8 @@ export class UploadFile extends Component {
             body: formData
         }
         const response =  await fetch(`http://localhost:5000/api/MeterReadings/meter-reading-uploads`, options);
-         const data = await response.json();
-         console.log(`Here: ${data}`);
-        this.setState({ forecasts: data, loading: false });
+        const data = await response.json();
+        console.log(`Here: ${data}`);
+        
     }
 }
