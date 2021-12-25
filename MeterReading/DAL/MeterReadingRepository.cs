@@ -21,7 +21,7 @@ namespace MeterReadings.API.DAL
 
         public async Task<int> UploadMeterReadingAsync (string fileName)
         {
-            
+            int output = 0;
             if (!Path.GetExtension(fileName).Equals(".csv"))
             {
                 throw new  DomainNotFoundException("File format is not correct");
@@ -41,22 +41,33 @@ namespace MeterReadings.API.DAL
                     if (_context.Account.AsNoTracking().Any(o => o.AccountId == meterReading.AccountId))
                     {
                         //Not to add same entry twice
+                        
                         if (_context.MeterReading.AsNoTracking().Any(o => o.AccountId == meterReading.AccountId))
                         {
-                            _context.MeterReading.Attach(meterReading);
-                           
+
+                            var modMeterReading = _context.MeterReading.FirstOrDefault(o => o.AccountId == meterReading.AccountId);
+                            modMeterReading.AccountId = meterReading.AccountId;
+                            modMeterReading.MeterReadingDateTime = meterReading.MeterReadingDateTime;
+                            modMeterReading.MeterReadValue = meterReading.MeterReadValue;
+                            
+                            
                         }
                         else
                         {
+                          
                             _context.MeterReading.Add(meterReading);
-                            
+                     
                         }
                     }
 
                 }
+
             }
 
-            return await _context.SaveChangesAsync();
+            return output = await _context.SaveChangesAsync();
+             
+
+            
             
         }
 
