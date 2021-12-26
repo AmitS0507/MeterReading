@@ -20,8 +20,9 @@ namespace MeterReadings.Test
             //Arrange
             var repositoryMock = new Mock<IMeterReadingRepository>();
             var fileMock = new Mock<IFormFile>();
+            
             //Setup mock file using a memory stream
-            int output = 0;
+            
             var content = "Hello World from a Fake File";
             var fileName = "Meter_Reading.csv";
             var ms = new MemoryStream();
@@ -44,7 +45,7 @@ namespace MeterReadings.Test
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(ActionResult<int>));
-            Assert.AreEqual(result.Value, output);
+            
 
         }
         [TestMethod]
